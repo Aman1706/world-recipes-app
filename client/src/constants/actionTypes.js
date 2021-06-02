@@ -1,0 +1,14 @@
+export const FETCH_CUISINES = "FETCH_CUISINES";
+
+export const FETCH_RECIPES_BY_CUISINE_ID = "FETCH_RECIPES_BY_CUSINE_ID";
+export const FETCH_RECIPES = "FETCH_RECIPES";
+export const FETCH_RECIPE = "FETCH_RECIPE";
+export const CREATE_RECIPE = "CREATE_RECIPE";
+export const UPDATE_RECIPE = "UPDATE_RECIPE";
+export const DELETE_RECIPE = "DELETE_RECIPE";
+
+export const AUTH = "AUTH";
+export const LOGOUT = "LOGOUT";
+
+export const START_LOADING = "START_LOADING";
+export const END_LOADING = "END_LOADING";
