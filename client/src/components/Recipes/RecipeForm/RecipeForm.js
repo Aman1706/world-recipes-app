@@ -78,10 +78,16 @@ const RecipeForm = () => {
     ) {
       isValid = false;
       title = "Please add the difficulty";
-    } else if (!recipeData.ingredients) {
+    } else if (
+      !recipeData.ingredients ||
+      recipeData.ingredients === "<p><br></p>"
+    ) {
       isValid = false;
       title = "Please add the ingredients";
-    } else if (!recipeData.instructions) {
+    } else if (
+      !recipeData.instructions ||
+      recipeData.instructions === "<p><br></p>"
+    ) {
       isValid = false;
       title = "Please add the instructions";
     }
@@ -155,6 +161,7 @@ const RecipeForm = () => {
                 }
               />
             </Form.Group>
+
             <Form.Group>
               <Form.Label>Description</Form.Label>
               <Form.Control
@@ -175,6 +182,7 @@ const RecipeForm = () => {
                 }}
               />
             </Form.Group>
+
             <Form.Group>
               <Form.Label>Image</Form.Label>
               <div className="mb-2">
@@ -197,6 +205,7 @@ const RecipeForm = () => {
                 />
               </div>
             </Form.Group>
+
             <Form.Group>
               <Form.Label>Duration</Form.Label>
               <Row>
@@ -246,6 +255,7 @@ const RecipeForm = () => {
                 </Col>
               </Row>
             </Form.Group>
+
             <Form.Group>
               <Form.Label>Difficulty</Form.Label>
               <Form.Control
@@ -261,6 +271,7 @@ const RecipeForm = () => {
                 <option>Hard</option>
               </Form.Control>
             </Form.Group>
+
             <Form.Group>
               <Form.Label>Ingredients</Form.Label>
               <ReactQuill
@@ -273,6 +284,7 @@ const RecipeForm = () => {
                 }
               />
             </Form.Group>
+
             <Form.Group>
               <Form.Label>Instructions</Form.Label>
               <ReactQuill
@@ -285,6 +297,7 @@ const RecipeForm = () => {
                 }
               />
             </Form.Group>
+
             <Button variant="primary" type="submit" className="float-right">
               Submit
             </Button>

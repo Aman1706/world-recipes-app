@@ -61,7 +61,7 @@ const RecipeDetails = () => {
                     : `${recipe?.duration?.minutes}m`}
                 </p>
                 <p>
-                  <span className="font-weight-bold">Duration</span>:{" "}
+                  <span className="font-weight-bold">Difficulty</span>:{" "}
                   <span className={checkDifficulty(recipe?.difficulty)}>
                     {recipe?.difficulty}
                   </span>
