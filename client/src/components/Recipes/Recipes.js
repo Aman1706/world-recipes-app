@@ -21,7 +21,7 @@ import Loading from "../common/Loading/Loading";
 
 const Recipes = () => {
   const { id } = useParams();
-  const { recipes, isLoading } = useSelector((state) => state.recipes);
+  const { searchRecipes, isLoading } = useSelector((state) => state.recipes);
   const cuisine = useSelector((state) =>
     state.cuisines.cuisines.find((cuisine) => cuisine._id === id)
   );
@@ -38,9 +38,6 @@ const Recipes = () => {
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
-    if (!e.target.value) {
-      dispatch(getRecipesByCuisineId(id));
-    }
     dispatch(searchRecipe(e.target.value));
   };
 
@@ -75,12 +72,12 @@ const Recipes = () => {
           </Button>
         </Link>
       </div>
-      {!recipes.length && !isLoading ? (
+      {!searchRecipes.length && !isLoading ? (
         <Empty title="No Recipes Available" />
       ) : (
         <Row>
-          {recipes.map((recipe) => (
-            <Recipe key={recipe._id} recipe={recipe} isLoading={isLoading} />
+          {searchRecipes.map((recipe) => (
+            <Recipe key={recipe._id} recipe={recipe} />
           ))}
         </Row>
       )}
