@@ -143,7 +143,7 @@ const RecipeForm = () => {
             {id ? "Edit" : "Add"} Recipe
           </h3>
           <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="formName">
+            <Form.Group>
               <Form.Label>Name</Form.Label>
               <Form.Control
                 name="name"
@@ -155,7 +155,7 @@ const RecipeForm = () => {
                 }
               />
             </Form.Group>
-            <Form.Group controlId="formDescription">
+            <Form.Group>
               <Form.Label>Description</Form.Label>
               <Form.Control
                 name="description"
@@ -175,7 +175,7 @@ const RecipeForm = () => {
                 }}
               />
             </Form.Group>
-            <Form.Group controlId="formImage">
+            <Form.Group>
               <Form.Label>Image</Form.Label>
               <div className="mb-2">
                 {recipeData.image && (
@@ -197,14 +197,14 @@ const RecipeForm = () => {
                 />
               </div>
             </Form.Group>
-            <Form.Group controlId="formDuration">
+            <Form.Group>
               <Form.Label>Duration</Form.Label>
               <Row>
                 <Col>
                   <Form.Label>Hours(optional)</Form.Label>
                   <Form.Control
                     value={recipeData.duration.hours}
-                    name="duration"
+                    name="hours"
                     type="text"
                     rows={3}
                     placeholder="Enter the number of hours"
@@ -226,7 +226,7 @@ const RecipeForm = () => {
                   <Form.Label>Minutes</Form.Label>
                   <Form.Control
                     value={recipeData.duration.minutes}
-                    name="duration"
+                    name="minutes"
                     type="text"
                     rows={3}
                     placeholder="Enter the number of minutes"
@@ -246,7 +246,7 @@ const RecipeForm = () => {
                 </Col>
               </Row>
             </Form.Group>
-            <Form.Group controlId="formDifficulty">
+            <Form.Group>
               <Form.Label>Difficulty</Form.Label>
               <Form.Control
                 as="select"
@@ -261,7 +261,7 @@ const RecipeForm = () => {
                 <option>Hard</option>
               </Form.Control>
             </Form.Group>
-            <Form.Group controlId="formIngredients">
+            <Form.Group>
               <Form.Label>Ingredients</Form.Label>
               <ReactQuill
                 value={recipeData.ingredients}
@@ -273,7 +273,7 @@ const RecipeForm = () => {
                 }
               />
             </Form.Group>
-            <Form.Group controlId="formInstructions">
+            <Form.Group>
               <Form.Label>Instructions</Form.Label>
               <ReactQuill
                 value={recipeData.instructions}
