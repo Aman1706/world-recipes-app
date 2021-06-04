@@ -1,15 +1,18 @@
 import {
   FETCH_CUISINES,
-  START_LOADING,
-  END_LOADING,
+  CUISINE_START_LOADING,
+  CUISINE_END_LOADING,
 } from "../constants/actionTypes";
 
-const cuisineReducer = (state = { isLoading: true, cuisines: [] }, action) => {
+const cuisineReducer = (
+  state = { isLoadingCuisine: true, cuisines: [] },
+  action
+) => {
   switch (action.type) {
-    case START_LOADING:
-      return { ...state, isLoading: true };
-    case END_LOADING:
-      return { ...state, isLoading: false };
+    case CUISINE_START_LOADING:
+      return { ...state, isLoadingCuisine: true };
+    case CUISINE_END_LOADING:
+      return { ...state, isLoadingCuisine: false };
     case FETCH_CUISINES:
       return { ...state, cuisines: action.payload };
     default:

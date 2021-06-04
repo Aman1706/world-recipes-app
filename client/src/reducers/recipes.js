@@ -7,6 +7,7 @@ import {
   UPDATE_RECIPE,
   DELETE_RECIPE,
   CREATE_RECIPE,
+  SEARCH_RECIPE,
 } from "../constants/actionTypes";
 
 const recipeReducers = (state = { isLoading: true, recipes: [] }, action) => {
@@ -37,7 +38,7 @@ const recipeReducers = (state = { isLoading: true, recipes: [] }, action) => {
           (recipe) => recipe._id !== action.payload
         ),
       };
-    case "SEARCH_RECIPE":
+    case SEARCH_RECIPE:
       return {
         ...state,
         recipes: state.recipes.filter((recipe) =>

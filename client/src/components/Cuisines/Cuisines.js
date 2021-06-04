@@ -10,17 +10,17 @@ import Empty from "../common/Empty/Empty";
 import Loading from "../common/Loading/Loading";
 
 const Cuisines = () => {
-  const { cuisines, isLoading } = useSelector((state) => state.cuisines);
+  const { cuisines, isLoadingCuisine } = useSelector((state) => state.cuisines);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getCuisines());
   }, [dispatch]);
 
-  if (!cuisines.length && !isLoading)
+  if (!cuisines.length && !isLoadingCuisine)
     return <Empty title="No Cuisines Available" />;
 
-  return isLoading ? (
+  return isLoadingCuisine ? (
     <Loading />
   ) : (
     <Container>

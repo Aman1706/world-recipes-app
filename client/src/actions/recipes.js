@@ -7,6 +7,7 @@ import {
   UPDATE_RECIPE,
   DELETE_RECIPE,
   CREATE_RECIPE,
+  SEARCH_RECIPE,
 } from "../constants/actionTypes";
 
 import * as api from "../api/index";
@@ -82,5 +83,5 @@ export const deleteRecipe = (recipeId) => async (dispatch) => {
 };
 
 export const searchRecipe = (searchValue) => {
-  return { type: "SEARCH_RECIPE", payload: searchValue };
+  return { type: SEARCH_RECIPE, payload: searchValue };
 };

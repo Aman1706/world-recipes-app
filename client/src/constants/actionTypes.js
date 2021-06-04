@@ -6,9 +6,13 @@ export const FETCH_RECIPE = "FETCH_RECIPE";
 export const CREATE_RECIPE = "CREATE_RECIPE";
 export const UPDATE_RECIPE = "UPDATE_RECIPE";
 export const DELETE_RECIPE = "DELETE_RECIPE";
+export const SEARCH_RECIPE = "SEARCH_RECIPE";
 
 export const AUTH = "AUTH";
 export const LOGOUT = "LOGOUT";
 
 export const START_LOADING = "START_LOADING";
 export const END_LOADING = "END_LOADING";
+
+export const CUISINE_START_LOADING = "CUISINE_START_LOADING";
+export const CUISINE_END_LOADING = "CUISINE_END_LOADING";

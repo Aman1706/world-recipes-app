@@ -115,6 +115,12 @@ const RecipeForm = () => {
         );
       }
 
+      Swal.fire({
+        icon: "success",
+        confirmButtonColor: "#0a5ffe",
+        title: `Recipe Successfully ${id ? "Edited" : "Created"}!`,
+      });
+
       setRecipeData({
         name: "",
         description: "",
