@@ -20,3 +20,5 @@ base 64, React Quill, Node.js, Express.js, MongoDB, JWT, BcryptJS, Sweet Alert 2
 BootStrap, React Bootstrap, etc.
 
 Front end section of the app is deployed in netlify while as the backend section is deployed in heroku.
+
+The MongoDB database is hosted in the MongoDB Atlas Server
