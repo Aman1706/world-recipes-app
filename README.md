@@ -9,7 +9,7 @@ Users can either create accounts(JWT) or sign in using Google(GoogleAuth).
 
 The CRUD operations that users can perform are view recipes by cuisine, view individual recipes, create and edit recipes.
 
-RTE Editor using React Quill has been implemented in the add recipe form page for ingredients and instructions.
+RTE using React Quill has been implemented in the add recipe form page for ingredients and instructions.
 
 CRUD operations for cuisines have been restricted to only be done from the backend.
 
